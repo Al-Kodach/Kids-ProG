@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.navLink {
+  @apply py-3
+}
+
+.navLink * {
+  @apply text-2xl
+}
