@@ -4,6 +4,7 @@ const context = createContext();
 function ContextProvider({ children }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
+  // opening and closing menu fn
   const toggleMenu = () => (
     setIsMenuOpen(prevState => !prevState)
   );
