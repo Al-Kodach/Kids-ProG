@@ -5,7 +5,7 @@ export default function bugger() {
   const {isMenuOpen, toggleMenu} = useContext(context);
 
   // if menu bar is false we return the bugger icon
-  if(isMenuOpen) {
+  if(!isMenuOpen) {
     return (
       <button onClick={toggleMenu}>
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
