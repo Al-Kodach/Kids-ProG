@@ -8,12 +8,19 @@ import './index.css';
 import Layout from '../components/Layout';
 import { ContextProvider } from '../hooks/useContext';
 import ErrorPage from './ErrorPage';
+import Home from './Home';
+
 
 const routes = createBrowserRouter([
   {
     path: '/',
     element: <Layout />,
-    errorElement: <ErrorPage />
+    errorElement: <ErrorPage />,
+    children: [{
+      path: '/',
+      element: <Home />,
+
+    }]
   }
 ])
 
