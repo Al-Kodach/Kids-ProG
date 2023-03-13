@@ -7,11 +7,13 @@ import {
 import './index.css';
 import Layout from '../components/Layout';
 import { ContextProvider } from '../hooks/useContext';
+import ErrorPage from './ErrorPage';
 
 const routes = createBrowserRouter([
   {
     path: '/',
-    element: <Layout />
+    element: <Layout />,
+    errorElement: <ErrorPage />
   }
 ])
 
