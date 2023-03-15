@@ -5,15 +5,14 @@ import {
   RouterProvider
 } from 'react-router-dom';
 import './index.css';
-import Layout from '../components/Layout';
 import { ContextProvider } from '../hooks/useContext';
+import Layout from '../components/Layout';
 import ErrorPage from './ErrorPage';
 import Home from './Home';
 import Contact from './Contact';
 
 const routes = createBrowserRouter([
   {
-    path: '/',
     element: <Layout />,
     errorElement: <ErrorPage />,
     children: [

@@ -1,13 +1,12 @@
-import { Link } from "react-router-dom";
 import { useContext } from "react";
 import { context } from "../../hooks/useContext";
+import { Link } from "react-router-dom";
 
 export default function Nav() {
   const {isMenuOpen, toggleMenu} = useContext(context);
 
   return (
     <nav className={`md:block ${isMenuOpen ? 'block' : 'hidden'}`}>
-          <div className='flex flex-col items-center justify-space-around'>
             <span className="navLink">
               <Link to='/'>Home</Link>
             </span>
@@ -17,13 +16,13 @@ export default function Nav() {
             </span>
 
             <span className="navLink">
-              <Link to='blog'>Blog</Link>
+              <Link to='learn'>Learn</Link>
             </span>
 
             <span className="navLink">
               <Link to='contacts'>Contacts</Link>
             </span>
-        </div>
+
     </nav>
     )
 }

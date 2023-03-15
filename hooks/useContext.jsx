@@ -4,19 +4,23 @@ const context = createContext();
 function ContextProvider({ children }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  // opening and closing menu fn
+
   const toggleMenu = () => (
+    // switch between true and false
     setIsMenuOpen(prevState => !prevState)
   );
 
   return (
     <>
-    <context.Provider value={{
-      isMenuOpen,
-      toggleMenu,
-    }}>
-      { children }
-    </context.Provider>
+      <context.Provider value={
+        {
+          isMenuOpen,
+          toggleMenu,
+        }
+      }
+      >
+        { children }
+      </context.Provider>
     </>
   );
 }

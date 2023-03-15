@@ -1,10 +1,10 @@
 import { useContext } from "react";
 import { context } from "../../hooks/useContext";
 
-export default function bugger() {
+export function bugger() {
   const {isMenuOpen, toggleMenu} = useContext(context);
 
-  // if menu bar is false we return the bugger icon
+  // return menu btn if isMenuOpen is false
   if(!isMenuOpen) {
     return (
       <button onClick={toggleMenu}>
@@ -15,7 +15,7 @@ export default function bugger() {
     );
   }
 
-// return close icon if isMenuOpen is true
+// return close btn if isMenuOpen is true
   return (
     <button onClick={toggleMenu}>
       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
