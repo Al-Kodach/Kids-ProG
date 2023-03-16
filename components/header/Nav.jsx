@@ -7,22 +7,23 @@ export default function Nav() {
 
   return (
     <nav className={`md:block ${isMenuOpen ? 'block' : 'hidden'}`}>
-            <span className="navLink">
-              <Link to='/'>Home</Link>
-            </span>
+      <div className="flex flex-col text-center">
+        <span className="navLink">
+          <Link to='/'>Home</Link>
+        </span>
 
-            <span className="navLink">
-              <Link to='about'>About</Link>
-            </span>
+        <span className="navLink">
+          <Link to='about'>About</Link>
+        </span>
 
-            <span className="navLink">
-              <Link to='learn'>Learn</Link>
-            </span>
+        <span className="navLink">
+          <Link to='learn'>Learn</Link>
+        </span>
 
-            <span className="navLink">
-              <Link to='contacts'>Contacts</Link>
-            </span>
-
+        <span className="navLink">
+          <Link to='contacts'>Contacts</Link>
+        </span>
+      </div>
     </nav>
     )
 }
